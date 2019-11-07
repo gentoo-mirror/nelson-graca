@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst prepare
+DEPEND=dev-perl/net-server dev-perl/Net-CIDR dev-perl/Config-IniFiles dev-perl/Cache-FastMmap dev-perl/Mail-SPF dev-perl/DBI mysql? ( virtual/mysql dev-perl/DBD-mysql ) postgres? ( dev-db/postgresql-base dev-perl/DBD-Pg ) webinterface? ( dev-lang/php[pdo,mysql?,postgres?] virtual/httpd-php )
+DESCRIPTION=Policy daemon for postfix and other MTAs
+EAPI=4
+HOMEPAGE=http://policyd.sf.net/
+IUSE=mysql postgres webinterface
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-perl/net-server dev-perl/Net-CIDR dev-perl/Config-IniFiles dev-perl/Cache-FastMmap dev-perl/Mail-SPF dev-perl/DBI mysql? ( virtual/mysql dev-perl/DBD-mysql ) postgres? ( dev-db/postgresql-base dev-perl/DBD-Pg ) webinterface? ( dev-lang/php[pdo,mysql?,postgres?] virtual/httpd-php )
+REQUIRED_USE=|| ( mysql postgres )
+SLOT=0
+SRC_URI=http://devlabs.linuxassist.net/attachments/download/223/cluebringer-2.0.12.tar.xz
+_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_md5_=6e97d130944a4ad15b0e0598db12e5e0
