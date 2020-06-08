@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PLOCALES="ca de el es et fr gl it ja kab ko nl pt ru uk zh_CN zh_TW"
+PLOCALES="ca de el es et fr gl he it ja kab ko nb_NO nl pl pt pt_BR ru tr uk zh_CN zh_TW"
 
 inherit l10n qmake-utils
 
@@ -29,7 +29,7 @@ RDEPEND="
 	dev-qt/qtgui:5
 	dev-qt/qtnetwork:5
 	dev-qt/qtopengl:5
-	dev-qt/qtquickcontrols:5
+	dev-qt/qtquickcontrols2:5
 	dev-qt/qtsvg:5
 	dev-qt/qtwidgets:5
 	ffmpeg?	( media-video/ffmpeg:= )
