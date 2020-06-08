@@ -6,6 +6,7 @@ dev-perl/Cache-FastMmap 1.400.0: Uses an mmap'ed file to act as a shared memory 
 dev-util/eclipse-mat 1.7.0: Eclipse Memory Analyzer can be used to view Heapdumps of Java programs
 dev-util/soapui 5.4.0: The Swiss-Army Knife for SOAP Testing
 mail-filter/policyd 2.0.12: Policy daemon for postfix and other MTAs
+media-video/webcamoid 8.7.1: A full featured webcam capture application
 net-wireless/blueproximity 1.2.5: Proximity detector for your mobile phone via bluetooth
 sys-apps/hv_kvp_daemon 3.12.13: Key-value pair daemon for Hyper-V virtualized guests
 sys-apps/hv_vss_daemon 3.12.13: VSS daemon for Hyper-V virtualized guests
