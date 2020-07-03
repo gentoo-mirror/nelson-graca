@@ -11,7 +11,7 @@ RESTRICT="strip"
 
 DESCRIPTION="JProfiler java profiling tool"
 HOMEPAGE="http://www.ej-technologies.com/products/jprofiler/overview.html"
-SRC_URI="https://download-keycdn.ej-technologies.com/jprofiler/jprofiler_linux_${PV//./_}.tar.gz"
+SRC_URI="https://download-gcdn.ej-technologies.com/jprofiler/jprofiler_linux_${PV//./_}.tar.gz"
 LICENSE="Proprietary"
 IUSE=""
 KEYWORDS="~x86 ~amd64"
