@@ -13,7 +13,6 @@ net-wireless/blueproximity 1.2.5: Proximity detector for your mobile phone via b
 sys-apps/hv_kvp_daemon 3.12.13: Key-value pair daemon for Hyper-V virtualized guests
 sys-apps/hv_vss_daemon 3.12.13: VSS daemon for Hyper-V virtualized guests
 sys-fs/bindfs 1.13.8: FUSE filesystem for bind mounting with altered permissions
-sys-fs/mysqlfs 0.4.0_rc1 0.4.0_rc2: Fuse-filesystem utilising a MySQL database
 sys-kernel/dkms 2.8.3: Dynamic Kernel Module Support
 sys-kernel/hid-asus-rog 0.4.5: 
 sys-power/asus-nb-ctrl 1.1.0: 
