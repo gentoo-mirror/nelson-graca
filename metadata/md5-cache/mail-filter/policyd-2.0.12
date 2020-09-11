@@ -10,5 +10,5 @@ RDEPEND=dev-perl/net-server dev-perl/Net-CIDR dev-perl/Config-IniFiles dev-perl/
 REQUIRED_USE=|| ( mysql postgres )
 SLOT=0
 SRC_URI=http://devlabs.linuxassist.net/attachments/download/223/cluebringer-2.0.12.tar.xz
-_eclasses_=multilib	2477ebe553d3e4d2c606191fe6c33602	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
+_eclasses_=multilib	98584e405e2b0264d37e8f728327fed1	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
 _md5_=6e97d130944a4ad15b0e0598db12e5e0
