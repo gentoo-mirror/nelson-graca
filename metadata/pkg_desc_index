@@ -6,7 +6,6 @@ dev-java/maven-bin 3.5.4: Project Management and Comprehension Tool for Java
 dev-perl/Cache-FastMmap 1.400.0: Uses an mmap'ed file to act as a shared memory interprocess cache
 dev-util/eclipse-mat 1.7.0: Eclipse Memory Analyzer can be used to view Heapdumps of Java programs
 dev-util/soapui 5.4.0: The Swiss-Army Knife for SOAP Testing
-mail-filter/policyd 2.0.12: Policy daemon for postfix and other MTAs
 media-video/webcamoid 8.7.1: A full featured webcam capture application
 net-misc/vgrive 1.6.1: A Google Drive client for linux
 net-wireless/blueproximity 1.2.5: Proximity detector for your mobile phone via bluetooth
@@ -16,4 +15,5 @@ sys-fs/bindfs 1.13.8: FUSE filesystem for bind mounting with altered permissions
 sys-kernel/dkms 2.8.3: Dynamic Kernel Module Support
 sys-kernel/hid-asus-rog 0.4.5: 
 sys-power/asus-nb-ctrl 1.1.0: 
-x11-misc/barrier 2.3.2: Lets you easily share a single mouse and keyboard between multiple computers
+x11-misc/barrier 2.3.2 2.3.3: Lets you easily share a single mouse and keyboard between multiple computers
+x11-misc/nvidia-prime 314: NVIDIA Prime Render Offload configuration and utilities

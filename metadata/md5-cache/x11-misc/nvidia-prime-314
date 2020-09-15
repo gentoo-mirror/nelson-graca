@@ -1,0 +1,8 @@
+DEFINED_PHASES=install
+DESCRIPTION=NVIDIA Prime Render Offload configuration and utilities
+EAPI=7
+HOMEPAGE=https://redcorelinux.org
+KEYWORDS=amd64
+LICENSE=GPL-2
+SLOT=0
+_md5_=5b92b8514acb7ce045f2565eafe8dd97
