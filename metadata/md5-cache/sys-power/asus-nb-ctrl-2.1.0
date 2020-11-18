@@ -1,0 +1,14 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DEPEND=dev-lang/rust
+EAPI=7
+HOMEPAGE=https://gitlab.com/asus-linux/asus-nb-ctrl
+KEYWORDS=~amd64 ~x86
+LICENSE=MPL-2.0
+PROPERTIES=live
+RDEPEND=dev-lang/rust
+RESTRICT=network-sandbox
+SLOT=0
+SRC_URI=https://gitlab.com/asus-linux/asus-nb-ctrl
+_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
+_md5_=7ca37cc90327836753143ed6d1e10234
