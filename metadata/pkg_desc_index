@@ -9,6 +9,7 @@ dev-util/soapui 5.4.0: The Swiss-Army Knife for SOAP Testing
 media-video/webcamoid 8.7.1: A full featured webcam capture application
 net-misc/vgrive 1.6.1: A Google Drive client for linux
 net-wireless/blueproximity 1.2.5: Proximity detector for your mobile phone via bluetooth
+sci-geosciences/google-earth-bin 7.3.3: Explore, search and discover the planet.
 sys-apps/hv_kvp_daemon 3.12.13: Key-value pair daemon for Hyper-V virtualized guests
 sys-apps/hv_vss_daemon 3.12.13: VSS daemon for Hyper-V virtualized guests
 sys-fs/bindfs 1.13.8: FUSE filesystem for bind mounting with altered permissions
