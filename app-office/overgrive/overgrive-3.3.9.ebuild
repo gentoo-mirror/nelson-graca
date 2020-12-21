@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
-inherit fdo-mime font gnome2-utils eutils versionator
+EAPI=7
+inherit font gnome2-utils eutils
 
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
@@ -36,9 +36,9 @@ src_prepare() {
 
 	sed -i 's/Version=3.3/Version=1.0/' usr/share/applications/overgrive.desktop
 	mv usr/share/doc/overgrive usr/share/doc/overgrive-${PV}
-	
+
 	gunzip usr/share/doc/overgrive-${PV}/changelog.gz
-	
+
 
 	eapply_user
 

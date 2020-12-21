@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
-inherit fdo-mime font gnome2-utils eutils versionator
+EAPI=7
+inherit font gnome2-utils eutils
 
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
