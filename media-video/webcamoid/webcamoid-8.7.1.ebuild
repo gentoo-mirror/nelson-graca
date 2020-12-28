@@ -1,7 +1,7 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 PLOCALES="ca de el es et fr gl he it ja kab ko nb_NO nl pl pt pt_BR ru tr uk zh_CN zh_TW"
 
