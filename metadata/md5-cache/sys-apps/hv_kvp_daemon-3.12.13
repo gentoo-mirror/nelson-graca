@@ -5,5 +5,5 @@ HOMEPAGE=http://kernel.org
 IUSE=kernel_linux
 KEYWORDS=amd64 x86
 SLOT=3.12.13
-_eclasses_=eapi7-ver	f9ec87e93172b25ce65a85303dc06964	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
+_eclasses_=eapi7-ver	f9ec87e93172b25ce65a85303dc06964	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	1a94dc06d324bd0dab754e11abe6d27e
 _md5_=27c8fe78e046dde727ddd75cdaeff03c
