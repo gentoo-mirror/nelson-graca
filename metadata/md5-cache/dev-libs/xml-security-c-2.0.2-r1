@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure install
+DEPEND=>=dev-libs/xerces-c-3.2 dev-libs/openssl nss? ( dev-libs/nss ) xalan? ( dev-libs/xalan-c )
+DESCRIPTION=Apache C++ XML security libraries
+EAPI=7
+HOMEPAGE=https://santuario.apache.org/
+IUSE=debug examples libressl nss static-libs xalan
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=>=dev-libs/xerces-c-3.2 dev-libs/openssl nss? ( dev-libs/nss ) xalan? ( dev-libs/xalan-c )
+SLOT=0
+SRC_URI=mirror://apache/santuario/c-library/xml-security-c-2.0.2.tar.gz
+_md5_=61904013d3403acc4d45b639ea4e9ef2
