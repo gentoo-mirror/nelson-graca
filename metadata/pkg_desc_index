@@ -15,6 +15,6 @@ sys-apps/hv_vss_daemon 3.12.13: VSS daemon for Hyper-V virtualized guests
 sys-fs/bindfs 1.13.8: FUSE filesystem for bind mounting with altered permissions
 sys-kernel/dkms 2.8.3: Dynamic Kernel Module Support
 sys-kernel/hid-asus-rog 0.4.5 0.6.0 0.6.0-r1: 
-sys-power/asus-nb-ctrl 1.1.0 2.1.0: 
+sys-power/asus-nb-ctrl 1.1.0 2.1.0 2.2.1: 
 x11-misc/barrier 2.3.2 2.3.3: Lets you easily share a single mouse and keyboard between multiple computers
 x11-misc/nvidia-prime 314: NVIDIA Prime Render Offload configuration and utilities
