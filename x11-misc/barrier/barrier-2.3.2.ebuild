@@ -17,6 +17,7 @@ RESTRICT="test"
 DEPEND="
 	!libressl? ( dev-libs/openssl:* )
 	libressl? ( dev-libs/libressl )
+	net-dns/avahi
 	net-misc/curl
 	x11-libs/libICE
 	x11-libs/libSM
