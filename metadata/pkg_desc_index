@@ -7,7 +7,6 @@ dev-libs/xml-security-c 2.0.2-r1: Apache C++ XML security libraries
 dev-perl/Cache-FastMmap 1.400.0: Uses an mmap'ed file to act as a shared memory interprocess cache
 dev-util/eclipse-mat 1.7.0: Eclipse Memory Analyzer can be used to view Heapdumps of Java programs
 dev-util/soapui 5.4.0: The Swiss-Army Knife for SOAP Testing
-media-video/webcamoid 8.7.1: A full featured webcam capture application
 net-misc/vgrive 1.6.1: A Google Drive client for linux
 sci-geosciences/google-earth-bin 7.3.3: Explore, search and discover the planet.
 sys-fs/bindfs 1.13.8: FUSE filesystem for bind mounting with altered permissions
