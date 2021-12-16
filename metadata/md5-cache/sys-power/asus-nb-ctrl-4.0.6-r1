@@ -1,0 +1,15 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DEPEND=dev-lang/rust
+EAPI=7
+HOMEPAGE=https://gitlab.com/asus-linux/asusctl
+INHERIT=git-r3
+KEYWORDS=~amd64 ~x86
+LICENSE=MPL-2.0
+PROPERTIES=live
+RDEPEND=dev-lang/rust
+RESTRICT=network-sandbox
+SLOT=0
+SRC_URI=https://gitlab.com/asus-linux/asusctl
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=2b1ddee1778834ff80fa61148c922306
