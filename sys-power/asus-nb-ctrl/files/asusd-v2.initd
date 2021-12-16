@@ -1,0 +1,29 @@
+#!/sbin/openrc-run
+# Copyright 2020 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="Asus Daemon"
+description=""
+command=/usr/bin/asusd
+command_args="${asusd_args}"
+pidfile="/var/run/asusd.pid"
+
+start() {
+  ebegin "Starting ${name}"
+  export IS_SERVICE="1"
+  start-stop-daemon --start \
+    --make-pidfile \
+    --background \
+    --exec ${command} \
+    --stdout /var/log/asusd \
+    --stderr /var/log/asusd \
+    --pidfile ${pidfile}
+  eend $?
+}
+
+stop() {
+  ebegin "Stopping ${name}"
+  start-stop-daemon --stop \
+    --pidfile ${pidfile}
+  eend $?
+}
