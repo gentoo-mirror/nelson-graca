@@ -11,5 +11,5 @@ RDEPEND=dev-lang/rust
 RESTRICT=network-sandbox
 SLOT=0
 SRC_URI=https://gitlab.com/asus-linux/asus-nb-ctrl
-_eclasses_=git-r3	97f7f638070d17e4c2b6542589bb4575
+_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991
 _md5_=7ca37cc90327836753143ed6d1e10234
