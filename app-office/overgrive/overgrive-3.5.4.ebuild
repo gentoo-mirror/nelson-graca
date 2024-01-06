@@ -1,25 +1,20 @@
-# Copyright 1999-2017 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Id$
-
-EAPI=7
-inherit font gnome2-utils eutils
+EAPI=8
+inherit xdg-utils font gnome2-utils
 
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
+PYTHON_COMPAT=( python3_{5..12} )
+
 DESCRIPTION="overGrive is a complete Google Drive desktop client solution for Linux"
 HOMEPAGE="https://www.thefanclub.co.za/overgrive"
-SRC_URI="
-https://www.thefanclub.co.za/sites/default/files/public/overgrive/overgrive_${PV}_all.deb -> ${PN}_${PV}.deb
-"
+SRC_URI="${PN}_${PV}.deb"
 
 SLOT="0"
-RESTRICT="strip mirror" # mirror as explained at bug #547372
+RESTRICT="fetch strip mirror" # mirror as explained at bug #547372
 LICENSE="fanclub-EULA"
 IUSE=""
 
 RDEPEND="
-	dev-python/oauth2client
 	dev-libs/libappindicator
 	dev-python/pyinotify
 	>=dev-python/google-api-python-client-1.5.3
@@ -28,26 +23,32 @@ RDEPEND="
 DEPEND="
 "
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 S="${WORKDIR}"
 
+pkg_nofetch() {
+	einfo "Please download"
+	einfo "  - overgrive_${PV}_all.deb -> ${PN}_${PV}.deb"
+	einfo "from ${HOMEPAGE} and place them in your DISTDIR directory."
+}
+
 src_prepare() {
-	unpack ./control.tar.xz
-	unpack ./data.tar.xz
+	unpack ./control.tar.gz
+	unpack ./data.tar.gz
 
 	sed -i 's/Version=3.3/Version=1.0/' usr/share/applications/overgrive.desktop
 	mv usr/share/doc/overgrive usr/share/doc/overgrive-${PV}
-
-	gunzip usr/share/doc/overgrive-${PV}/changelog.gz
-
+	gunzip usr/share/doc/overgrive usr/share/doc/overgrive-${PV}/changelog.gz
 
 	eapply_user
-
 }
 
 src_install() {
 	doins -r opt
 	doins -r usr
-	dosym /opt/thefanclub/overgrive/__pycache__/overgrive.cpython-37.pyc /opt/thefanclub/overgrive/overgrive
+	exeinto /opt/bin
+	doexe "${FILESDIR}/overgrive"
 }
 
 pkg_postinst() {

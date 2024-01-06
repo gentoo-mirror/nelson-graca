@@ -1,0 +1,6 @@
+#!/bin/bash
+
+PYTHON_VERSION=`python --version|awk '{print $2}'|awk -F '.' '{print $2}'`
+
+/usr/bin/python /opt/thefanclub/overgrive/__pycache__/overgrive.cpython-3${PYTHON_VERSION}.pyc
+
