@@ -50,7 +50,7 @@ src_install() {
 	fperms 755 /usr/$(get_libdir)/systemd/system-sleep/${PN}.py
 
 	# openrc
-	newinitd "${WORKDIR}"/"${PN}"-"${PV}"/openrc/optimus-manager optimus-manager
+	newinitd "${FILESDIR}/optimus-manager.init" optimus-manager
 
 
 	# modules
