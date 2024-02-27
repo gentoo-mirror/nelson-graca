@@ -1,0 +1,16 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install nofetch postinst postrm prepare setup
+DEPEND=
+DESCRIPTION=overGrive is a complete Google Drive desktop client solution for Linux
+EAPI=8
+HOMEPAGE=https://www.thefanclub.co.za/overgrive
+INHERIT=xdg-utils font gnome2-utils
+IUSE=X
+KEYWORDS=~amd64 ~x86 ~arm ~arm64
+LICENSE=fanclub-EULA
+RDEPEND=dev-libs/libappindicator dev-python/pyinotify >=dev-python/google-api-python-client-1.5.3
+RESTRICT=fetch strip mirror
+SLOT=0
+SRC_URI=overgrive_3.5.4.deb
+_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3	font	aa113a3df9cd0a9693a1c1ee7c34a6eb	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	gnome2-utils	30dbce54b89e77b86f366548f94419ad
+_md5_=dbe1a5803059ea8a2bf0cf41fc9e9d3d
