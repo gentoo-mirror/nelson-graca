@@ -18,6 +18,7 @@ RDEPEND="
 	dev-libs/libappindicator
 	dev-python/pyinotify
 	>=dev-python/google-api-python-client-1.5.3
+	dev-python/google-auth-oauthlib
 "
 
 DEPEND="
@@ -39,8 +40,8 @@ src_prepare() {
 
 	sed -i 's/Version=3.3/Version=1.0/' usr/share/applications/overgrive.desktop
 	sed -i 's/Exec=python3 /Exec=/' usr/share/applications/overgrive.desktop
-	mv usr/share/doc/overgrive usr/share/doc/overgrive-${PV}
-	gunzip usr/share/doc/overgrive usr/share/doc/overgrive-${PV}/changelog.gz
+	mv usr/share/doc/overgrive usr/share/doc/${PF}
+	gunzip usr/share/doc/overgrive usr/share/doc/${PF}/changelog.gz
 
 	eapply_user
 }
