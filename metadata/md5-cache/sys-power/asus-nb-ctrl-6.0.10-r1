@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=dev-libs/libayatana-appindicator sys-auth/seatd >=dev-lang/rust-1.75
 RESTRICT=network-sandbox
 SLOT=0
-_eclasses_=git-r3	fbb2889c81f3a05910c1524db69425c1
+_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81
 _md5_=d8c2b0c5b086af41d8748c4e6b2888aa
