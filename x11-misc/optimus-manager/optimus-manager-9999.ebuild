@@ -3,11 +3,11 @@
 
 EAPI=8
 
+DISTUTILS_SINGLE_IMPL=1
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{11,12,13} )
 
-inherit distutils-r1
-inherit git-r3
+inherit distutils-r1 git-r3
 
 DESCRIPTION="Management utility to handle GPU switching for Optimus laptops"
 HOMEPAGE="https://github.com/Askannz/optimus-manager"
@@ -17,8 +17,12 @@ EGIT_REPO_URI="${HOMEPAGE}"
 LICENSE="MIT"
 SLOT="0"
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 DEPEND="
-	dev-python/dbus-python[${PYTHON_USEDEP}]
+	$(python_gen_cond_dep '
+		dev-python/dbus-python[${PYTHON_USEDEP}]
+	')
 	sys-apps/pciutils
 	x11-apps/xrandr
 	x11-apps/mesa-progs
@@ -28,15 +32,17 @@ RDEPEND="
 	"
 BDEPEND="${PYTHON_DEPS}"
 
-src_prepare() {
-
-	default
+src_configure() {
+	cat >> setup.cfg <<-EOF
+	[options]
+	optimize=1
+	root="$D"
+	EOF
 }
-#src_compile() {
-#	python setup.py build
-#}
 
-src_install() {
+python_install_all() {
+	distutils-r1_python_install_all
+
 	# config
 	insinto /etc/${PN}
 	doins config/*
@@ -68,7 +74,6 @@ src_install() {
 	doins ${PN}.conf
 
 #	python setup.py install --root="$D" --optimize=1 --skip-build
-	default
 }
 
 pkg_postinst() {
