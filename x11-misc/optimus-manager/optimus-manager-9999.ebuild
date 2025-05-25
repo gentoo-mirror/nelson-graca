@@ -3,21 +3,16 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8,9,10,11,12} )
-DISTUTILS_USE_SETUPTOOLS=rdepend
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{11,12,13} )
 
-inherit distutils-r1 systemd
+inherit distutils-r1
+inherit git-r3
 
 DESCRIPTION="Management utility to handle GPU switching for Optimus laptops"
 HOMEPAGE="https://github.com/Askannz/optimus-manager"
 
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="${HOMEPAGE}"
-else
-	SRC_URI="https://github.com/Askannz/optimus-manager/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
-fi
+EGIT_REPO_URI="${HOMEPAGE}"
 
 LICENSE="MIT"
 SLOT="0"
@@ -34,36 +29,19 @@ RDEPEND="
 BDEPEND="${PYTHON_DEPS}"
 
 src_prepare() {
-	sed -i "s#/sbin#/usr/bin#g" "${S}"/login_managers/sddm/20-"${PN}".conf || die
-	sed -i "s#/sbin#/usr/bin#g" "${S}"/login_managers/lightdm/20-"${PN}".conf || die
 
 	default
 }
+#src_compile() {
+#	python setup.py build
+#}
 
 src_install() {
-	# systemd
-	systemd_dounit systemd/${PN}.service
-	insinto /usr/$(get_libdir)/systemd/logind.conf.d
-	doins systemd/logind/10-${PN}.conf
-	insinto /usr/$(get_libdir)/systemd/system-sleep
-	doins systemd/suspend/${PN}.py
-	fperms 755 /usr/$(get_libdir)/systemd/system-sleep/${PN}.py
-
-	# openrc
-	newinitd "${FILESDIR}/optimus-manager.init" optimus-manager
-
-
-	# modules
-	insinto /lib/modprobe.d
-	doins modules/${PN}.conf
-
-	insinto /var/lib/${PN}
-	doins var/*
-
 	# config
 	insinto /etc/${PN}
 	doins config/*
-	fperms 755 /etc/"${PN}"/{nvidia-enable.sh,nvidia-disable.sh,xsetup-hybrid.sh,xsetup-integrated.sh,,xsetup-nvidia.sh}
+	fperms 755 /etc/"${PN}"
+	fperms 644 /etc/"${PN}"/optimus-manager.conf
 
 	# login managers
 	insinto /etc/sddm.conf.d
@@ -71,19 +49,29 @@ src_install() {
 	insinto /etc/lightdm/lightdm.conf.d
 	doins login_managers/lightdm/20-${PN}.conf
 
+	#man
+	doman optimus-manager.1
+
+	# modules
+	insinto /lib/modprobe.d
+	doins modules/${PN}.conf
+
+	#profile
+	insinto /etc/profile.d
+	doins profile.d/${PN}.sh
+
+	# openrc
+	doinitd openrc/optimus-manager
+
 	# misc
 	insinto /usr/share
 	doins ${PN}.conf
 
-	distutils-r1_src_install
+#	python setup.py install --root="$D" --optimize=1 --skip-build
+	default
 }
 
 pkg_postinst() {
-	elog "optimus-manager : enabling optimus-manager.service"
-	mkdir -p /etc/systemd/system/graphical.target.wants/
-	ln -s /usr/lib/systemd/system/optimus-manager.service /etc/systemd/system/graphical.target.wants/optimus-manager.service
-	elog "Please reboot your computer before using optimus-manager"
-
 	echo
 	elog "Default configuration can be found and /usr/share/${PN}.conf. Please do not edit it."
 	elog "Use /etc/${PN}/${PN}.conf instead (if doesn't exist, create it)."
@@ -107,11 +95,5 @@ pkg_postrm() {
 	xorg_conf=/etc/X11/xorg.conf.d/10-optimus-manager.conf
 	if [ -f "$xorg_conf" ]; then
 	    rm $xorg_conf
-	fi
-
-	elog "optimus-manager : disabling optimus-manager.service"
-	service_file_link=/etc/systemd/system/graphical.target.wants/optimus-manager.service
-	if [ -L "$service_file_link" ]; then
-	    rm $service_file_link
 	fi
 }
