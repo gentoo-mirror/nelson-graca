@@ -70,10 +70,9 @@ python_install_all() {
 	doinitd openrc/optimus-manager
 
 	# misc
-	insinto /usr/share
+	insinto /usr/share/${PN}
 	doins ${PN}.conf
 
-#	python setup.py install --root="$D" --optimize=1 --skip-build
 }
 
 pkg_postinst() {
