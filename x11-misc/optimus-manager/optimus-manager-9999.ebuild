@@ -32,6 +32,12 @@ RDEPEND="
 	"
 BDEPEND="${PYTHON_DEPS}"
 
+src_prepare() {
+	sed -i "s#/sbin#/usr/bin#g" "${S}"/login_managers/sddm/20-"${PN}".conf || die
+	sed -i "s#/sbin#/usr/bin#g" "${S}"/login_managers/lightdm/20-"${PN}".conf || die
+
+	default
+}
 src_configure() {
 	cat >> setup.cfg <<-EOF
 	[options]
