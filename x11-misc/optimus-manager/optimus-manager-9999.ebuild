@@ -73,7 +73,7 @@ python_install_all() {
 	doins profile.d/${PN}.sh
 
 	# openrc
-	doinitd openrc/optimus-manager
+	doinitd ${FILESDIR}/optimus-manager.init
 
 	# misc
 	insinto /usr/share/${PN}
