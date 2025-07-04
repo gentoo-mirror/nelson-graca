@@ -1,4 +1,4 @@
-app-office/overgrive 3.5.4 3.5.4-r1: overGrive is a complete Google Drive desktop client solution for Linux
+app-office/overgrive 3.5.4 3.5.4-r1 3.5.5: overGrive is a complete Google Drive desktop client solution for Linux
 dev-libs/xml-security-c 2.0.2-r1: Apache C++ XML security libraries
 net-misc/postman-bin 10.12.0: API platform for building and using APIs
 net-misc/vgrive 1.6.1: A Google Drive client for linux
