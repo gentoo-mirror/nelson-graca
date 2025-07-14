@@ -12,5 +12,5 @@ RDEPEND=dev-libs/libappindicator dev-python/pyinotify >=dev-python/google-api-py
 RESTRICT=fetch strip mirror
 SLOT=0
 SRC_URI=overgrive_3.5.4.deb
-_eclasses_=xdg-utils	42869b3c8d86a70ef3cf75165a395e09	font	aa113a3df9cd0a9693a1c1ee7c34a6eb	toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772	gnome2-utils	a8cf148ec7f5ae0b1f1d33ae5f7f9e88
+_eclasses_=xdg-utils	42869b3c8d86a70ef3cf75165a395e09	font	aa113a3df9cd0a9693a1c1ee7c34a6eb	toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	gnome2-utils	a8cf148ec7f5ae0b1f1d33ae5f7f9e88
 _md5_=43120d125247b1cd6d1aa8d1eb177867
